@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 import 'package:assignment_1/hotelpage.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
         color: Colors.white,
         shape: RoundedRectangleBorder(
             side: BorderSide(
-              color: Color.fromARGB(255, 167, 164, 164),
+              color: Color.fromARGB(255, 228, 228, 228),
             ),
             borderRadius: BorderRadius.circular(15)),
         child: Column(
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                             fontWeight: FontWeight.bold,
                           )),
                     ),
-                    FloatingActionButton(
+                    FloatingActionButton.small(
                       backgroundColor: Colors.white,
                       onPressed: () {},
                       child: Icon(
@@ -84,7 +84,34 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    myskill(Icons.hotel, 'Hotel'),
+                    Container(
+                      width: 95,
+                      height: 120,
+                      child: Card(
+                        //margin: EdgeInsets.all(0),
+                        color: Colors.blue,
+                        shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              color: Color.fromARGB(255, 167, 164, 164),
+                            ),
+                            borderRadius: BorderRadius.circular(15)),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.hotel,
+                                size: 35,
+                                color: Color.fromARGB(255, 243, 243, 243)),
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Text(
+                              'Hotel',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                     myskill(Icons.flight_outlined, 'Flight'),
                     myskill(Icons.place_outlined, 'Place'),
                     myskill(Icons.food_bank, 'Food'),
