@@ -3,6 +3,7 @@
 
 Some ScreenShots - <br>
 Homepage
+<br>
 <img src='https://github.com/KingRaizel/travel-app-ui/blob/main/ss/homepage.jpeg' width = '200'/>
 <br>
 Info page
